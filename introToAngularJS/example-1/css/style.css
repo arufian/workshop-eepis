@@ -1,0 +1,86 @@
+.banner {
+	height: 100px;
+	margin: auto auto 20px auto;
+	width: 400px;
+	text-align: center;
+	font-size: 25px;
+	line-height: 100px;
+	border-radius: 10px;
+	color: rgba(247, 125, 111, 0.7);
+}
+.form {
+	width: 80%;
+	margin: auto;
+	padding: 10px 0 0px 0;
+	height: auto;
+	box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+	background: white;
+}
+.form > input {
+    height: 50px;
+	width: 90%;
+	padding-left: 10px;
+	margin-left: 10px;
+	border: none;
+	box-sizing: border-box;
+	font-size: 20px;
+	opacity: 0.5;
+	outline: none;
+}
+body {
+	background: #f5f5f5;
+	color: #4d4d4d;
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	outline: none;
+}
+ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul li {
+	  position: relative;
+    border-bottom: 1px solid #ededed;
+}
+li .checkb {
+	-webkit-appearance: none;
+	outline: none;
+	width: 40px; height: 40px;
+}
+li .checkb:after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+}
+li .checkb:checked:after {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+li label {
+	display: inline-block;
+	padding: 10px 0px 10px 20px;
+	font-size: 18px;
+	opacity: 0.7;
+	position: absolute;
+}
+label.completed{
+	  color: #d9d9d9;
+	text-decoration: line-through;
+}
+li .closeb {
+	display: none;
+	outline: none;
+	-webkit-appearance: none;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	color: #cc9a9a;
+	float: right;
+	background: none;
+	border: none;
+}
+li:hover .closeb {
+	display: block;
+	cursor: pointer;
+}
+.closeb:after {
+	content: 'x';
+}

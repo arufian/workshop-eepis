@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Membuat todo app dengan JS dan JQuery</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+	<div class="banner">
+		Todo App dengan JS dan JQuery
+	</div>
+	<div class="form">
+		<input type="text" value="" id="todo-input" placeholder="Apa yang anda lakukan hari ini ?" />
+		<hr>
+		<ul id="todo-list">
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var $todoInput = $('#todo-input');
+		var $todoList = $('#todo-list');
+		$todoInput.bind('keypress', function(e) {
+			if(e.keyCode === 13 && $(e.target).val().trim() === '') {
+				var value = $(e.target).val().trim();
+				var strDOM = '<li><div>'+
+						'<input type="checkbox" class="checkb"/>'+
+						'<label>'+value+'</label>'+
+						'<button class="closeb"></button>'
+						'</div>'+
+					'</li>';
+				$(e.target).val('');
+				var $el  = $(strDOM);
+				$todoList.append($el);
+				$el.find('.checkb').change(function() {
+					$el.find('label').toggleClass('completed');
+				});
+				$el.find('.closeb').click(function() {
+					$el.remove();
+				})
+			}
+		});
+		$todoInput.focus();
+	</script>
+</body>
+</html>

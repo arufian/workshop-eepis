@@ -1,0 +1,45 @@
+<html ng-app="todo">
+<head>
+	<title>Membuat todo app dengan AngularJS</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body ng-controller="todoCtrl">
+	<div class="banner">
+		Todo App dengan AngularJS
+	</div>
+	<div class="form">
+		<input type="text" ng-model="inputTxt" placeholder="Apa yang anda lakukan hari ini ?" ng-keypress="addItem($event)"/>
+		<hr>
+		<ul ng-repeat="item in items track by $index">
+			<li>
+				<div>
+					<input type="checkbox" class="checkb" ng-model="item.completed">
+					<label  ng-class="{completed : item.completed}">{{item.text}}</label>
+					<button class="closeb" ng-click="removeItem($index)"></button>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var todoApp = angular.module('todo', []);
+		todoApp.controller('todoCtrl', function($scope) {
+			$scope.items = [];
+			$scope.addItem = function(event){
+				if (event.which === 13 && $scope.inputTxt.trim() !== ''){
+					var todo = {
+						text: $scope.inputTxt,
+						completed: false
+					}
+					$scope.items.push(todo);
+					$scope.inputTxt = '';
+				}
+			}
+			$scope.removeItem = function($index){
+				$scope.items.splice($index, 1);
+			}
+		});
+	</script>
+</body>
+</html>

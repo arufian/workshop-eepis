@@ -1,0 +1,21 @@
+{
+  "name": "example-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alfian Busyro <arufian@httlabs.io> (http://www.httlabs.io)",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.0.3"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "colors": "^1.0.3",
+    "grunt": "^0.4.5",
+    "gulp": "^3.8.11",
+    "request": "^2.55.0"
+  }
+}
