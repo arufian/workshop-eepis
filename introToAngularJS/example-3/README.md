@@ -1,6 +1,6 @@
-# This Material is made for EEPIS Front-End development workshop
+# Todo WebApp using AngularJS and ngRoute
 
-## Todo WebApp using AngularJS and ngRoute
+## This Material is made for EEPIS Front-End development workshop
 
 ## How to use
 - `npm install`

@@ -1,6 +1,6 @@
-# This Material is made for EEPIS Front-End development workshop
+# Todo WebApp using AngularJS
 
-## Todo WebApp using AngularJS
+## This Material is made for EEPIS Front-End development workshop
 
 ## How to use
 - `bower install`
