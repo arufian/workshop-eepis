@@ -35,3 +35,22 @@ Aplikasi2 NodeJS yg telah dibuat dan di publish disebut Node Package. Dan perang
 	- ng-app, ng-controller, ng-repeat
 - example-3: ngRoute vs uiRoute
 	- memisah js script ke file lain (app.js dan route.js)
+	- controller di app.js
+	- router di route.js
+	- membuat temporary local server agar templating bisa berjalan
+		- angular templating menggunakan ajax untuk mem-fetch html jadi harus berjalan dalam suatu server & tidak cross-domain.
+	- memisah templates:
+		- main page: main.html
+		- todo item detail/edit page: detail.html
+	- item's date property:
+		- bisa di masukkan melalui detail.html
+	- menambah fitur local storage
+	- hasil: url untuk main dan detail page terpisah dan detail page bisa diakses langsung.
+- example-4:
+	- menggunakan source diatas
+	- mengganti ng-router dengan ui-router
+	- menambah fitur login
+	- step latihan:
+		- merubah ng-router ke ui-router (route.js)
+		- membuat login page
+		- memperkenalkan nested routing dengan memakai ui-router
