@@ -1,0 +1,15 @@
+<div class="form">
+	<input type="text" ng-model="inputTxt" placeholder="Apa yang anda lakukan hari ini ?" ng-keypress="addItem($event)"/>
+	<hr>
+	<ul ng-repeat="item in items track by $index">
+		<li>
+			<div>
+				<input type="checkbox" class="checkb" ng-model="item.completed" ng-change="saveItem()">
+				<a href="#/item/{{$index}}">
+					<label  ng-class="{completed : item.completed}">{{item.text}}</label>
+				</a>
+				<button class="closeb" ng-click="removeItem($index)"></button>
+			</div>
+		</li>
+	</ul>
+</div>

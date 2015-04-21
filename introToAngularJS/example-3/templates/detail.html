@@ -1,0 +1,6 @@
+<div class="form" style="position:relative">
+	<input type="checkbox" class="checkb" ng-model="item.completed">
+	<input type="text" ng-model="item.text" ng-keypress="updateItem($event)" class="item-text" ng-class="{completed:item.completed}" />
+	<input type="date" ng-model="item.date" class="date"/>
+	<button class="save" ng-click="saveItem()"></button>
+</div>

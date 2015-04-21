@@ -1,0 +1,14 @@
+{
+  "name": "example-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "http-server -p 8181 -a localhost"
+  },
+  "author": "Alfian Busyro <arufian@httlabs.io> (http://www.httlabs.io)",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.8.0"
+  }
+}
