@@ -1,0 +1,4 @@
+<input type="checkbox" class="checkb" ng-model="item.completed" ng-disabled="!isadmin">
+<input type="text" ng-model="item.text" ng-keypress="updateItem($event)" class="item-text" ng-class="{completed:item.completed}" />
+<input type="date" ng-model="item.date" class="date" ng-disabled="!isadmin"/>
+<button class="{{itemBtnClass}}" ng-click="submit()" item-button></button>

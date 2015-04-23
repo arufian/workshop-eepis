@@ -8,7 +8,5 @@
   },
   "author": "Alfian Busyro <arufian@httlabs.io> (http://www.httlabs.io)",
   "license": "ISC",
-  "dependencies": {
-    "http-server": "^0.8.0"
-  }
+  "dependencies": {}
 }

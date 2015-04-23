@@ -1,9 +1,9 @@
-# Todo WebApp using AngularJS and ngRoute
+# Todo WebApp using AngularJS and ui-router
 
 # What's covered in this material : 
-- routing with ngRoute
-- templating technique
-- web storage
+- routing using ui-router
+- nested view
+- Angular directive
 
 ## How to use
 - `npm install`

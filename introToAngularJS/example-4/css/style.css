@@ -1,0 +1,210 @@
+.banner {
+	position: relative;
+	height: 100px;
+	margin: auto auto 20px auto;
+	width: 400px;
+	text-align: center;
+	font-size: 25px;
+	line-height: 100px;
+	border-radius: 10px;
+	color: rgba(247, 125, 111, 0.7);
+}
+.form {
+	width: 80%;
+	margin: auto;
+	padding: 10px 0 0px 0;
+	height: auto;
+	box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+	background: white;
+	position: relative;
+}
+
+.form > input[type="text"],/*, button,*/ .todo-input, .login-input, .login-button{
+    height: 50px;
+	width: 90%;
+	margin-left: 20px;
+	border: none;
+	box-sizing: border-box;
+	font-size: 20px;
+	opacity: 0.5;
+	outline: none;
+}
+
+body {
+	background: #f5f5f5;
+	color: #4d4d4d;
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	outline: none;
+}
+ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul li {
+	  position: relative;
+    border-bottom: 1px solid #ededed;
+}
+.checkb {
+	-webkit-appearance: none;
+	outline: none;
+	width: 40px; height: 40px;
+}
+.checkb:after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+}
+.checkb:checked:after {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+li label {
+	display: inline-block;
+	padding: 10px 0px 10px 20px;
+	font-size: 18px;
+	opacity: 0.7;
+	position: absolute;
+	width: 70%;
+}
+.completed{
+	color: #d9d9d9;
+	text-decoration: line-through;
+}
+li .closeb {
+	display: none;
+	outline: none;
+	-webkit-appearance: none;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	color: #cc9a9a;
+	float: right;
+	background: none;
+	border: none;
+}
+li:hover .closeb {
+	display: block;
+	cursor: pointer;
+}
+.closeb:after {
+	content: 'x';
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: blue;
+}
+a:hover {
+    color: red;
+}
+
+.date {
+	outline: none;
+	height: 30px;
+	position: absolute;
+	top: 15px;
+	right: 70px;
+	font-size: 16px;
+	opacity: 0.5;
+	width: 170px;
+}
+
+.item-text {
+	top: 5px;
+	width:60% !important;
+	position: absolute !important;
+}
+
+.save, .back {
+	top: 5px;
+	position: absolute;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	right: 0px;
+	opacity: 0.5;
+}
+
+.save:hover, .back:hover {
+	opacity: 1.0;
+}
+
+.save:after {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024"><path d="M896 0h-896v1024h1024v-896l-128-128zM512 128h128v256h-128v-256zM896 896h-768v-768h64v320h576v-320h74.978l53.022 53.018v714.982z"></path></svg>');
+}
+/* tambahan */
+
+.back:after {
+	content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024"><path d="M402.746 877.254l-320-320c-24.994-24.992-24.994-65.516 0-90.51l320-320c24.994-24.992 65.516-24.992 90.51 0 24.994 24.994 24.994 65.516 0 90.51l-210.746 210.746h613.49c35.346 0 64 28.654 64 64s-28.654 64-64 64h-613.49l210.746 210.746c12.496 12.496 18.744 28.876 18.744 45.254s-6.248 32.758-18.744 45.254c-24.994 24.994-65.516 24.994-90.51 0z"></path></svg>');
+}
+
+.login-input {
+	margin-bottom: 10px;
+	background: rgba(39, 6, 6, 0.8);
+	padding: 10px;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 1px rgba(37, 32, 32, 0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+}
+
+.login-button {
+	margin-bottom: 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	background: white;
+	border: 1px solid #fe6159;
+	color: #FE615C;
+	opacity: 1;
+}
+
+.login-button:hover,
+.login-button:active {
+	color: #fff;
+}
+
+.login-button:hover {
+	background: #FE615C;
+}
+
+.login-button:active {
+	background: #DD1A1A;
+}
+
+.login-fix-div {
+	position: fixed;
+	top: 200px;
+	height: 60px;
+	width: 60px;
+	background: rgb(246, 162, 152);
+	border-radius: 60px;
+	color: white !important;
+	padding: 22px 0 0 16px;
+	cursor: pointer;
+}
+
+.login-fix-div:hover {
+	color: rgb(246, 162, 152) !important;
+	background: white;
+}
+
+.invalid {
+	padding: 0 0 20px 20px;
+	color: red;
+}
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}

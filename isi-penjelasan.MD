@@ -37,6 +37,7 @@ Aplikasi2 NodeJS yg telah dibuat dan di publish disebut Node Package. Dan perang
 	- memisah js script ke file lain (app.js dan route.js)
 	- controller di app.js
 	- router di route.js
+	- teknik templating
 	- membuat temporary local server agar templating bisa berjalan
 		- angular templating menggunakan ajax untuk mem-fetch html jadi harus berjalan dalam suatu server & tidak cross-domain.
 	- memisah templates:
@@ -50,6 +51,7 @@ Aplikasi2 NodeJS yg telah dibuat dan di publish disebut Node Package. Dan perang
 	- menggunakan source diatas
 	- mengganti ng-router dengan ui-router
 	- menambah fitur login
+	- angular directive
 	- step latihan:
 		- merubah ng-router ke ui-router (route.js)
 		- membuat login page
