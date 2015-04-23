@@ -16,7 +16,7 @@ todoApp.config(['$stateProvider', '$urlRouterProvider',
         }
     })
     .state('main.admin', {
-      url: '/admin',
+      url: '/',
       views: {
         'remove-item@main': {
           templateUrl: 'templates/admin/remove.html',  
