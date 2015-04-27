@@ -1,0 +1,15 @@
+<div>
+	<input type="text" ng-model="inputTxt" placeholder="Apa yang anda lakukan hari ini ?" ng-keypress="addItem($event)" class="todo-input" />
+	<hr>
+	<ul ng-repeat="item in items track by $index">
+		<li>
+			<div>
+				<input type="checkbox" class="checkb" ng-model="item.completed" ng-change="saveItem()" ng-disabled="!isadmin">
+				<a ng-click="toItem($index)">
+					<label  ng-class="{completed : item.completed}">{{item.text}}</label>
+				</a>
+				<span ui-view="remove-item"></span>
+			</div>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,22 @@
+<html ng-app="todo">
+<head>
+	<title>Routing dengan ui-router</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="//localhost:35729/livereload.js"></script>
+</head>
+<body>
+	<div class="banner">
+		Todo App dengan AngularJS a
+		<span style="position: absolute;top:30px;font-size:16px;width:400px;left:0px;">
+				(Routing dengan ui-router)
+			</span>
+	</div>
+	<div class="form" ui-view></div>
+	<div ui-view="login-link"></div>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/route.js"></script>	
+</body>
+</html>
