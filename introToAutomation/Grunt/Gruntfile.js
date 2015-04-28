@@ -16,7 +16,6 @@ module.exports = function(grunt) {
 		},
 		uglify: {
 			options: {
-				mangle: false,
 				preserveComments: 'false'
 			},
 			app: {
@@ -38,7 +37,7 @@ module.exports = function(grunt) {
 	      livereload: true
 	    },
 	    resources: {
-				files: ['js/*.js', 'templates/**/*', 'css/*.css', 'index.html'],
+				files: ['js/*.js', 'templates/**/*.html', 'css/*.css', '*.html'],
 				task: ['connect']
 	    }
 		},
@@ -46,18 +45,11 @@ module.exports = function(grunt) {
 	    all: {
 	      options:{
 	        port: 8080,
-	        hostname: '0.0.0.0',
-	        keepalive: true,
 	        livereload: true,
 	        open: true
 	      }
 	    }
-	  },
-	  open: {
-	    all: {
-	      path: 'http://localhost:<%= connect.all.options.port%>'
-	    }
-	  },
+	  }
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
@@ -69,5 +61,5 @@ module.exports = function(grunt) {
 
 
 	grunt.registerTask('deploy', ['clean:resources', 'concat:withlibs', 'uglify:app', 'copy']);
-	grunt.registerTask('serve', ['connect', 'watch']);
+	grunt.registerTask('serve', ['connect', 'watch:resources']);
 }

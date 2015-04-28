@@ -11,7 +11,7 @@ function getStorage(key) {
 	return JSON.parse(localStorage.getItem(key));
 }
 
-todoControllers.controller('todoCtrl', function($scope, $state) {
+todoControllers.controller('todoCtrl', ['$scope', '$state', function($scope, $state) {
 	$scope.items = $scope.items || getStorage(STORAGE_KEY);
 	if($scope.items === null || $scope.items.length < 1) {
 		// jika belum ada isinya, buat array baru
@@ -47,9 +47,9 @@ todoControllers.controller('todoCtrl', function($scope, $state) {
 	$scope.toItem = function(index) {
 		$state.go($scope.isadmin ? 'item.admin': 'item', {itemId: index});
 	}
-});
+}]);
 
-todoControllers.controller('itemCtrl', function($scope, $state, $stateParams, $location) {
+todoControllers.controller('itemCtrl', ['$scope', '$state', '$stateParams', '$location', function($scope, $state, $stateParams, $location) {
 	$scope.items = getStorage(STORAGE_KEY);
 	$scope.item = $scope.items[$stateParams.itemId];
 	$scope.item.date = new Date($scope.item.date);
@@ -64,9 +64,9 @@ todoControllers.controller('itemCtrl', function($scope, $state, $stateParams, $l
 		$scope.isadmin = true;
 	}
 	$scope.state = $state;
-});
+}]);
 
-todoControllers.controller('loginCtrl', function($scope, $state) {
+todoControllers.controller('loginCtrl', ['$scope', '$state', function($scope, $state) {
 	if($state.current.name.indexOf('logout') > -1) {
 		$state.go('main.anonymous');
 		return;
@@ -80,7 +80,7 @@ todoControllers.controller('loginCtrl', function($scope, $state) {
 			$scope.invalid = true;
 		}
 	}
-});
+}]);
 
 var todoDirectives = angular.module('todoDirectives', []);
 

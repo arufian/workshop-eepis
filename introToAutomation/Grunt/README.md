@@ -1,14 +1,18 @@
-# Todo WebApp using AngularJS and ui-router
+# Deployment Automation and development efficiency with GruntJS
 
 # What's covered in this material : 
-- routing using ui-router
-- nested view
-- Angular directive
+- How to write Gruntfile.js
+- Deployment process automation : 
+	- Grunt concat, uglify, copy, clean
+- Development efficiency : 
+	- Grunt watch, connect
 
 ## How to use
 - `npm install`
 - `bower install`
-- `npm run server`
-- open http://localhost:8080/ on your browser
+- Generate distribution source codes: 
+	`grunt deploy`
+- Development phase:
+	`grunt serve`
 
 ## This Material is made for EEPIS Front-End development workshop
