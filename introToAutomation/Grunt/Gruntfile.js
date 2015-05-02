@@ -11,7 +11,20 @@ module.exports = function(grunt) {
 					'bower_components/jquery/dist/jquery.js',
 					'js/*', 
 				],
-			  dest: 'dist/js/app.js',
+			  dest: 'dist/app.js',
+			},
+			dev: {
+				options: {
+					separator: '\n'
+				},
+				src: [
+					'bower_components/angular/angular.js',
+					'bower_components/ui-router/release/angular-ui-router.js',
+					'bower_components/jquery/dist/jquery.js',
+					'js/main.js', 
+					'js/route.js' 
+				],
+				dest: 'app.js',
 			}
 		},
 		uglify: {
@@ -20,25 +33,35 @@ module.exports = function(grunt) {
 			},
 			app: {
 	      files: {
-	        'dist/js/app.js': ['dist/js/app.js']
+	        'dist/app.js': ['dist/app.js']
 	      }
 	    }
 		},
 		copy: {
 			main: {
-			  files: [{expand: true, src: ['css/*.css', 'templates/**/*'], dest: 'dist/', filter: 'isFile'},],
+			  files: [{
+			  	expand: true, 
+			  	src: ['css/*.css', 'templates/**/*', 'index.html'], 
+			  	dest: 'dist/', 
+			  	filter: 'isFile'
+			  }],
 		  }
 		},
 		clean: {
-			resources: ['dist/js', 'dist/css']
+			resources: ['dist/js', 'dist/css'],
+			dev: ['app.js']
 		},
 		watch: {
 	    options: {
 	      livereload: true
 	    },
 	    resources: {
-				files: ['js/*.js', 'templates/**/*.html', 'css/*.css', '*.html'],
+				files: ['templates/**/*.html', 'css/*.css', '*.html'],
 				task: ['connect']
+	    },
+	    javascript: {
+	    	files: ['js/*.js'],
+	    	task: ['clean:dev', 'concat:dev', 'connect']
 	    }
 		},
 		connect: {
@@ -61,5 +84,5 @@ module.exports = function(grunt) {
 
 
 	grunt.registerTask('deploy', ['clean:resources', 'concat:withlibs', 'uglify:app', 'copy']);
-	grunt.registerTask('serve', ['connect', 'watch:resources']);
+	grunt.registerTask('serve', ['clean:dev', 'concat:dev', 'connect', 'watch:resources', 'watch:javascript']);
 }
