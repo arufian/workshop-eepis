@@ -4,7 +4,7 @@
 
 NodeJs adalah sebuah open source, cross-platform yg awalnya dibuat untuk aplikasi server-side dan networking.
 Aplikasi NodeJS menggunakan bahasa Javascript, dan dapat dijalankan diatas NodeJS dalam OS X, Linux dan Windows.
-Mengapa dalam workshop kali ini kita menggunakan Mac OSX, karena dalam Windows mempunyai batas max. untuk panjang direktori yaitu 256 karakter. Jadi untuk menggunakan NodeJS secara efisien disarankan memakai OS Linux atau Mac OSX.
+Mengapa dalam workshop kali ini kita menggunakan Mac OSX, karena dalam Windows mempunyai batas max. untuk panjang direktori yaitu 260 karakter. Jadi untuk menggunakan NodeJS secara efisien disarankan memakai OS Linux atau Mac OSX.
 
 ### Pengaplikasi-annya:
 

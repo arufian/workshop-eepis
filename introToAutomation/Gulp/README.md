@@ -1,9 +1,9 @@
 # Todo WebApp using AngularJS and ui-router
 
 # What's covered in this material : 
-- routing using ui-router
-- nested view
-- Angular directive
+- How to use Gulp
+- gulp.watch
+- gulp-connect
 
 ## How to use
 - `npm install`

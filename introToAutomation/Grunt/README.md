@@ -5,7 +5,7 @@
 - Deployment process automation : 
 	- Grunt concat, uglify, copy, clean
 - Development efficiency : 
-	- Grunt watch, connect
+	- Grunt watch, connect, livereload
 
 ## How to use
 - `npm install`
