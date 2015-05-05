@@ -12,28 +12,8 @@
 	- plus pengenalan OOP di JS
 - Membuat todo app dgn AngularJS.
 	- pengenalan model dan controller
-- ngRoute (ngView) dan ui-router (ui-view)
-- service dan factory
-- directive dan ngAnimate
+- Routing menggunakan ngRoute (ngView) dan ui-router (ui-view)
 
 ## Otomasi
 - Otomasi dengan Grunt
 - Otomasi dengan Gulp
-
-# CSS Preprocessor 
-- Sass
-- Stylus
-
-# Pembuatan RestfulAPI server dengan ExpressJS
-- restful api dengan HTTP method GET, POST, PUT, DELETE
-
-# Modularity
-- RequireJS
-- Browserify
-
-# Testing
-- Unit Testing: Mocha, Chai, QUnit
-- E2E: protractor
-
-# Bonus:	
-- NodeWebkit

@@ -65,9 +65,6 @@ Aplikasi2 NodeJS yg telah dibuat dan di publish disebut Node Package. Dan perang
 		- merubah ng-router ke ui-router (route.js)
 		- membuat login page
 		- memperkenalkan nested routing dengan memakai ui-router
-- example-5:
-	- merubah local storage fitur menggunakan Service atau Factory
-	- menambah animasi transisi halaman dengan ngAnimate
 
 ## Otomasi
  - Mengapa harus menggunakan proses otomasi ?
