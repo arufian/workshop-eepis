@@ -2,7 +2,6 @@
 var gulp = require('gulp'),
   opn = require('opn'),
   connect = require('gulp-connect'),
-  historyApiFallback = require('connect-history-api-fallback');
 
 // deployment process
 var concat = require('gulp-concat'),
