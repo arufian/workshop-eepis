@@ -1,7 +1,7 @@
 // development phase
 var gulp = require('gulp'),
   opn = require('opn'),
-  connect = require('gulp-connect'),
+  connect = require('gulp-connect');
 
 // deployment process
 var concat = require('gulp-concat'),
