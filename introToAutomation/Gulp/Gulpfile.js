@@ -26,11 +26,13 @@ gulp.task('scriptsdev', ['cleandev'], function() {
 });
 
 gulp.task('reload', function() {
-    connect.reload()
+    gulp.src(['./templates/**/*.html', './css/*.css', './index.html'])
+      .pipe(connect.reload());
 });
 
 gulp.task('reloadjs', ['scriptsdev'], function() {
-    connect.reload();
+    gulp.src(['app.js'])
+      .pipe(connect.reload());
 });
 
 gulp.task('watch', function() {
